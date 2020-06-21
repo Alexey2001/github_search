@@ -6,9 +6,11 @@ import { About } from './pages/About';
 import { Profile } from './pages/Profile';
 import { Alert } from './components/Alert';
 import { AlertState } from './components/context/alert/AlertState';
+import { GithubState } from './components/context/github/GithubState';
 function App() {
   return (
-    <AlertState>
+    <GithubState>
+      <AlertState>
       <Router>
     <Navbar/>
       <div className="container pt-4">
@@ -21,6 +23,7 @@ function App() {
     </div>
     </Router>
     </AlertState>
+    </GithubState>
   );
 }
 
